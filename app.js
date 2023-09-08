@@ -2,6 +2,7 @@ const express = require("express");
 const data = require("./data");
 const cors = require("cors");
 
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(cors());
@@ -39,6 +40,6 @@ function paginatedResults(meals) {
   };
 }
 
-app.listen(8080, function () {
-  console.log("Server started on port 8080");
+app.listen(PORT, function () {
+  console.log(`Server started on port ${PORT}`);
 });
